@@ -20,10 +20,34 @@
 int main(int argc, char *argv[]) {
 	// declare and initialize the histogram
 	int histogram[ALPHABET_SIZE];
+	for(int i = 0; i < ALPHABET_SIZE; i++){
+		histogram[i] = 0; 
+	}
 
 	// TODO: start by getting strings from users until # is input
-	// TODO: after # is input, print menu options
+	getInput(histogram);
 	
+	// for(int i = 0; i < ALPHABET_SIZE; i++){
+	// 	printf("%d", histogram[i]); 
+	// }
+	// TODO: after # is input, print menu options
+	int option = 0;
+	while(option != 4){
+		option = getMenuOption();
+		if(option < 1 || option > 4){
+			printf("Error: Unknown option: %d\n\n", option);
+		}
+		else if(option == 1){
+			printFreq(histogram);
+		}
+		else if(option == 2){
+			printHist(histogram);
+		}
+		else if(option == 3){
+			getInput(histogram);
+		}
+		
+	}
 	printf("Exiting...\n");
 	return 0;
 }

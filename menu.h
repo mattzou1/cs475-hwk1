@@ -10,5 +10,6 @@
 
 // function declarations for the menu below
 int getMenuOption();
+void getInput(int histogram[]);
 
 #endif /* MENU_H_ */
