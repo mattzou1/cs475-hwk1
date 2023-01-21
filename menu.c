@@ -25,7 +25,7 @@ int getMenuOption() {
 	return opt;
 }
 
-
+//asks user for input and stores information in histogram array until user types #
 void getInput(int histogram[]){
 	char input[MAX_INPUT_LEN];
 	printf("Enter strings (# to stop):\n");
@@ -40,7 +40,7 @@ void getInput(int histogram[]){
 			}
 			//converts char value to index value
 			int index = (int)input[i] - 65;
-			//increments histogram array if character is A-Z
+			//increments histogram array at corresponding index if character is A-Z
 			if(index >= 0 && index <= 25){
 				histogram[index]++; 
 			}

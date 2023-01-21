@@ -27,10 +27,7 @@ int main(int argc, char *argv[]) {
 	// TODO: start by getting strings from users until # is input
 	getInput(histogram);
 	
-	// for(int i = 0; i < ALPHABET_SIZE; i++){
-	// 	printf("%d", histogram[i]); 
-	// }
-	// TODO: after # is input, print menu options
+	//opens word stats menu until you type 4
 	int option = 0;
 	while(option != 4){
 		option = getMenuOption();
